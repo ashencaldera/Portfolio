@@ -1192,6 +1192,54 @@
     background: rgba(245,166,35,0.06);
     border-radius: 2px;
   }
+
+  /* Project card images */
+  .project-img {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    position: relative;
+  }
+  .project-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    transition: transform 0.4s ease;
+    filter: brightness(0.85) saturate(0.9);
+  }
+  .project-card:hover .project-img img {
+    transform: scale(1.04);
+    filter: brightness(1) saturate(1);
+  }
+
+  /* Cert card images */
+  .cert-img-wrap {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+  }
+  .cert-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+  }
+  .cert-fallback-icon {
+    font-size: 20px;
+    color: var(--amber);
+  }
 </style>
 </head>
 <body>
@@ -1485,6 +1533,7 @@
     <!-- 01 -->
     <div class="project-card">
       <div class="project-number">01</div>
+      <div class="project-img"><img src="https://devsamurai.com/wp-content/uploads/2023/08/automl-featured-image.jpg" alt="Project 01" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Dec 2025 — Jan 2026</div>
       <div class="project-name">AutoML: Interactive Pipeline for Data Analysis</div>
       <div class="project-desc">Automated ML web application that handles data preprocessing, feature engineering, and model evaluation — delivering interactive insights and batch predictions via a Streamlit dashboard with confidence scoring.</div>
@@ -1500,6 +1549,7 @@
     <!-- 02 -->
     <div class="project-card">
       <div class="project-number">02</div>
+      <div class="project-img"><img src="https://cropcommand.com/wp-content/uploads/2023/10/crop-command-hero.jpg" alt="Project 02" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Feb 2026 — Apr 2026</div>
       <div class="project-name">AI-Powered Agricultural Intelligence &amp; Decision Support System</div>
       <div class="project-desc">Real-time streaming analytics platform using Kafka and Flask to process live weather data and generate AI-based crop recommendations, with dynamic risk analysis, profit estimation, and future simulation.</div>
@@ -1516,6 +1566,7 @@
     <!-- 03 -->
     <div class="project-card">
       <div class="project-number">03</div>
+      <div class="project-img"><img src="https://markovate.com/wp-content/uploads/2023/08/Multi-Agent-System.jpg" alt="Project 03" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Oct 2025 — Dec 2026</div>
       <div class="project-name">BizMind: Multi-Agent Agentic AI System</div>
       <div class="project-desc">Python-based autonomous business analytics system where Sales and Customer agents independently process structured data to extract key metrics, generating consolidated reports with strategic recommendations.</div>
@@ -1531,6 +1582,7 @@
     <!-- 04 -->
     <div class="project-card">
       <div class="project-number">04</div>
+      <div class="project-img"><img src="https://www.researchgate.net/publication/361982851/figure/fig1/AS:11431281089872383@1666843585726/Illustrating-four-deep-learning-based-methods-of-HAR-based-on-3D-human-pose-estimation.png" alt="Project 04" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Jan 2025 — Feb 2025</div>
       <div class="project-name">Real-Time Human Activity Recognition (CNN–LSTM + Attention)</div>
       <div class="project-desc">Hybrid CNN–LSTM deep learning model with attention mechanism for human activity recognition on sensor time-series data. Deployed end-to-end via Streamlit with real-time predictions and robustness testing under noisy conditions.</div>
@@ -1547,6 +1599,7 @@
     <!-- 05 -->
     <div class="project-card">
       <div class="project-number">05</div>
+      <div class="project-img"><img src="https://nextgentemplates.com/wp-content/uploads/2023/06/Energy-Consumptions-Dashboard-in-Power-BI.png" alt="Project 05" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Aug 2025 — Oct 2025</div>
       <div class="project-name">Manchester Energy Strategic Intelligence</div>
       <div class="project-desc">Modular SQL stored procedures and CTEs to clean a 182k-record 10-year EPC dataset for financial modelling. Identified insulation as the #1 city-wide retrofit priority for carbon reduction using string-parsing cost analysis.</div>
@@ -1562,6 +1615,7 @@
     <!-- 06 -->
     <div class="project-card">
       <div class="project-number">06</div>
+      <div class="project-img"><img src="https://i.ytimg.com/vi/gT_5kLvNqYs/maxresdefault.jpg" alt="Project 06" onerror="this.parentElement.style.display='none'"/></div>
       <div class="project-period">Dec 2024</div>
       <div class="project-name">Road Crash Data Analysis Dashboard</div>
       <div class="project-desc">Synthesized six years of road safety data (2013–2018) to map crash hotspots and safety trends. Built a dynamic Power BI dashboard and structured SQL database analysing crash severity and spatial distribution across safety zones.</div>
@@ -1612,8 +1666,8 @@
         <div class="exp-line"><div class="exp-dot"></div></div>
         <div class="exp-content">
           <div class="exp-period">2025 – Present</div>
-          <div class="exp-title">Independent Skill Development</div>
-          <div class="exp-org">Self-Directed Learning &amp; Project Work</div>
+          <div class="exp-title">Machine Learning &amp; Data Engineering</div>
+          <div class="exp-org">Continuous Professional Development</div>
           <div class="exp-desc">Continuously strengthening skills in machine learning, full-stack data solutions, and data storytelling, with a strong emphasis on solving real-world problems through impactful, scalable solutions.</div>
         </div>
       </div>
@@ -1646,14 +1700,14 @@
   <div class="certs-grid reveal">
 
     <div class="cert-card">
-      <div class="cert-icon">◈</div>
+      <div class="cert-img-wrap"><img src="https://images.credly.com/images/88e2ae28-5b08-4eb2-9802-e81aafc5ddca/twitter_thumb_201604_PearsonIT_SpecialistJava.png" alt="Pearson" onerror="this.parentElement.innerHTML='<span class=cert-fallback-icon>◈</span>'"/></div>
       <div class="cert-name">Assured Diploma in Information Technology</div>
       <div class="cert-org">Pearson</div>
       <div class="cert-year">Jan 2025</div>
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">◈</div>
+      <div class="cert-img-wrap"><img src="https://images.credly.com/images/0571ab1d-f43b-43d9-b432-c1f4c5552a47/twitter_thumb_201604_Python_for_DS_and_AI.png" alt="IBM" onerror="this.parentElement.innerHTML='<span class=cert-fallback-icon>◈</span>'"/></div>
       <div class="cert-name">Python for Data Science, AI &amp; Development</div>
       <div class="cert-org">IBM</div>
       <div class="cert-year">Aug 2025</div>
@@ -1674,7 +1728,7 @@
     </div>
 
     <div class="cert-card">
-      <div class="cert-icon">◈</div>
+      <div class="cert-img-wrap"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="MATLAB" onerror="this.parentElement.innerHTML='<span class=cert-fallback-icon>◈</span>'"/></div>
       <div class="cert-name">MATLAB Onramp</div>
       <div class="cert-org">MATLAB Coding</div>
       <div class="cert-year"></div>
